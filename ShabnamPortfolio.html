@@ -455,16 +455,37 @@ footer p {
     </footer>
 
     <!-- JavaScript for Responsive Menu -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const menuToggle = document.querySelector('.menu-toggle');
-            const navList = document.querySelector('nav ul');
+<!-- JavaScript for Responsive Menu -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navList = document.querySelector('nav ul');
+        const menuLinks = document.querySelectorAll('nav ul li a');
 
-            menuToggle.addEventListener('click', function () {
-                navList.classList.toggle('active');
+        // Toggle menu open/close when clicking on the toggle button
+        menuToggle.addEventListener('click', function (event) {
+            navList.classList.toggle('active');
+            event.stopPropagation(); // Stop event from bubbling up to the document
+        });
+
+        // Close menu when clicking anywhere outside the menu or the toggle button
+        document.addEventListener('click', function (event) {
+            if (navList.classList.contains('active') && !navList.contains(event.target) && !menuToggle.contains(event.target)) {
+                navList.classList.remove('active');
+            }
+        });
+
+        // Close menu when clicking on a menu link
+        menuLinks.forEach(link => {
+            link.addEventListener('click', function () {
+                if (navList.classList.contains('active')) {
+                    navList.classList.remove('active');
+                }
             });
         });
-    </script>
+    });
+</script>
+
 </body>
 
 </html>

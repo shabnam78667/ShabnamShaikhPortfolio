@@ -1,324 +1,470 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>Shabnam Shaikh's Portfolio</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
- body, h1, h2, h3, h4, h5, h6 {font-family: "Montserrat", sans-serif; color: #f5f5f5; margin: 0;}
-        .w3-row-padding img {margin-bottom: 12px; border-radius: 8px;}
-        .w3-sidebar {width: 120px; background: #111; transition: width 0.3s;}
-        #main {margin-left: 120px; transition: margin-left 0.3s;}
-        @media only screen and (max-width: 600px) {#main {margin-left: 0;}}
-        .w3-card {background-color: #1e1e1e; color: #f5f5f5; border-radius: 8px; padding: 20px; margin-bottom: 20px; transition: transform 0.3s, box-shadow 0.3s;}
-        .w3-card:hover {transform: scale(1.05); box-shadow: 0px 10px 20px rgba(0,0,0,0.7);}
-        .w3-button {border-radius: 8px; transition: background-color 0.3s;}
-        .w3-button:hover {background-color: #444;}
-        .w3-section:hover {background-color: #333;}
-        .w3-top {background-color: #111; transition: background-color 0.3s;}
-        .w3-top:hover {background-color: #222;}
-        .fade-in {animation: fadeIn 2s ease-in;}
-        @keyframes fadeIn {from {opacity: 0;} to {opacity: 1;}}
-        .zoom-in {animation: zoomIn 1s ease-in;}
-        @keyframes zoomIn {from {transform: scale(0.9);} to {transform: scale(1);}}
-        .pulse {animation: pulse 1.5s infinite;}
-        @keyframes pulse {0% {transform: scale(1);} 50% {transform: scale(1.05);} 100% {transform: scale(1);}}
-        .animate-on-scroll {opacity: 0; transition: opacity 1s;}
-        .animate-on-scroll.visible {opacity: 1;}
-        .w3-padding-large {padding: 32px;}
-        .w3-padding-64 {padding: 48px;}
-        .w3-card h3 {color: #e0e0e0;}
-        .w3-card p {color: #b0b0b0;}
-        .w3-bar-item p {color: #ddd;}
-        .w3-row-padding .w3-card {border: 1px solid #333;}
-        .w3-top a {color: #ddd;}
-        .w3-top a:hover {background-color: #333; color: #fff;}
-        .w3-row-padding {margin: 0 -16px;}
-        .w3-row-padding .w3-col {padding: 0 16px;}
-        .w3-card {padding: 20px; margin-bottom: 20px;}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Shabnam Shaikh - Portfolio</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Custom CSS -->
+      <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+    background: #f4f4f4; /* Light professional background */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #282c34; /* Dark background for nav */
+    z-index: 1000;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px; /* Add padding for mobile */
+}
+
+.nav-container .logo {
+    color: #f5f5f5;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #f5f5f5;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #444;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    color: #f5f5f5;
+    cursor: pointer;
+}
+
+section {
+    padding: 80px 0;
+    min-height: 100vh;
+    background-color: #ffffff; /* White background for sections */
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    text-align: center;
+    padding: 0 20px; /* Add padding for mobile */
+}
+
+.profile-image {
+    width: 180px; /* Increased profile image size */
+    height: 180px; /* Increased profile image size */
+    border-radius: 50%;
+    border: 6px solid #333; /* Professional border color */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Enhanced shadow for a professional look */
+    overflow: hidden;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.profile-image:hover {
+    transform: scale(1.05); /* Slightly enlarge image on hover */
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.5rem;
+    color: #666; /* Darker color for text */
+    margin-bottom: 20px;
+}
+
+.content {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+hr {
+    width: 200px;
+    margin: 1rem auto;
+    border: 1px solid #444;
+}
+
+.about p {
+    text-align: justify;
+    font-size: 1.1rem;
+    color: #555; /* Slightly lighter color for text */
+    margin-bottom: 20px;
+}
+
+.skills,
+.projects,
+.responsibilities {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Use auto-fit for responsiveness */
+    gap: 20px;
+}
+
+.card {
+    background-color: #f9f9f9; /* Light card background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.card i {
+    font-size: 2rem;
+    color: #007bff; /* Professional color */
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.card p {
+    color: #666;
+}
+
+.contact form {
+    display: grid;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact input,
+.contact textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.contact button {
+    padding: 12px 20px;
+    background-color: #007bff; /* Professional color */
+    border: none;
+    color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact button:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    background-color: #282c34; /* Dark background for footer */
+    padding: 20px 0;
+    text-align: center;
+    color: #f5f5f5;
+}
+
+footer p {
+    font-size: 0.9rem;
+}
+
+@media screen and (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #282c34;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 10px 0;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    header p {
+        font-size: 1.2rem;
+    }
+
+    .card {
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    .profile-image {
+        width: 140px; /* Reduce profile image size for small screens */
+        height: 140px;
+    }
+
+    .skills,
+    .projects,
+    .responsibilities {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Adjust grid for smaller screens */
+    }
+}
 
     </style>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Shabnam Shaikh</div>
+            <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#responsibilities">Responsibilities</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header/Home Section -->
+    <header id="home">
+        <div class="profile-image">
+            <img src="https://raw.githubusercontent.com/shabnam78667/PortfolioImage/main/sharedimage.jpg" alt="Shabnam Shaikh">
+        </div>
+        <h1>I'm Shabnam Shaikh</h1>
+        <p>Lead Software Developer | Python | AI | C#</p>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="content">
+            <h2><i class="fas fa-user"></i> About Me</h2>
+            <hr>
+            <div class="about">
+                <p>Hello! I’m Shabnam Shaikh, a passionate Lead Software Developer with over 3 years of experience specializing in Python, C#, and AI technologies. I have a strong background in developing scalable and secure applications, with a focus on enhancing user experience and project efficiency.</p>
+                <p>I excel in designing and implementing advanced systems, collaborating with cross-functional teams, and leading projects to achieve high-quality results. My goal is to leverage my skills and experience to contribute to innovative projects and drive technology solutions forward.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="content">
+            <h2><i class="fas fa-cogs"></i> Skills</h2>
+            <hr>
+            <div class="skills">
+                <!-- Add your skills here -->
+                <div class="card">
+                    <i class="fas fa-code"></i>
+                    <h3>Programming</h3>
+                    <p>Python, C#, JavaScript, SQL</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-database"></i>
+                    <h3>Database</h3>
+                    <p>MS SQL Server, MySQL, MongoDB</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-cloud"></i>
+                    <h3>Cloud & Deployment</h3>
+                    <p>Azure, AWS, Docker</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-tools"></i>
+                    <h3>Tools & Frameworks</h3>
+                    <p>Django, Flask, .NET, React.js</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="content">
+            <h2><i class="fas fa-project-diagram"></i> Projects</h2>
+            <hr>
+            <div class="projects">
+                <!-- Add your projects here -->
+                <div class="card">
+                    <i class="fas fa-lock"></i>
+                    <h3>MS SQL Server Security</h3>
+                    <p>Enhanced data protection and integrity, leading to a 40% improvement in data security.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-plug"></i>
+                    <h3>Python API Calling with Django</h3>
+                    <p>Optimized API performance, achieving a 35% increase in response speed.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-calendar-alt"></i>
+                    <h3>Micro Planning Tool (MPT)</h3>
+                    <p>Improved project tracking efficiency by 30% through a CCPM-based management tool.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-database"></i>
+                    <h3>Execution Data Management (ExDM)</h3>
+                    <p>Increased efficiency by 30% and enhanced user satisfaction by 25%.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-flask"></i>
+                    <h3>Python API Calling with Flask</h3>
+                    <p>Enhanced functionalities and security features, improving performance by 30%.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Responsibilities Section -->
+    <section id="responsibilities">
+        <div class="content">
+            <h2><i class="fas fa-tasks"></i> Responsibilities</h2>
+            <hr>
+            <div class="responsibilities">
+                <!-- Add your responsibilities here -->
+                <div class="card">
+                    <h3>System Development</h3>
+                    <p>Led the development of comprehensive project management tools and systems.</p>
+                </div>
+                <div class="card">
+                    <h3>User Experience</h3>
+                    <p>Elevated user experience through advanced UI enhancements and scalable architecture.</p>
+                </div>
+                <div class="card">
+                    <h3>Communication</h3>
+                    <p>Facilitated seamless communication between stakeholders and resolved issues proactively.</p>
+                </div>
+                <div class="card">
+                    <h3>Quality Assurance</h3>
+                    <p>Resolved critical testing issues, enhancing system reliability and data accuracy.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="content">
+            <h2><i class="fas fa-envelope"></i> Contact</h2>
+            <hr>
+            <div class="contact">
+                <form action="submit_form.php" method="post">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Shabnam Shaikh. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Responsive Menu -->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            let elements = document.querySelectorAll('.animate-on-scroll');
-            window.addEventListener('scroll', function() {
-                elements.forEach(element => {
-                    if (element.getBoundingClientRect().top < window.innerHeight) {
-                        element.classList.add('visible');
-                    }
-                });
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navList = document.querySelector('nav ul');
+
+            menuToggle.addEventListener('click', function () {
+                navList.classList.toggle('active');
             });
         });
     </script>
-</head>
-<body class="w3-black">
-
-    <!-- Icon Bar (Sidebar - hidden on small screens) -->
-    <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center fade-in">
-        <!-- Avatar image in top left corner -->
-        <img src="your-avatar.jpg" style="width:100%; border-radius: 50%; border: 5px solid #444; box-shadow: 0 4px 8px rgba(0,0,0,0.5);" class="zoom-in">
-        <a href="#home" class="w3-bar-item w3-button w3-padding-large w3-black pulse">
-            <i class="fa fa-home w3-xxlarge"></i>
-            <p>HOME</p>
-        </a>
-        <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black pulse">
-            <i class="fa fa-user w3-xxlarge"></i>
-            <p>ABOUT</p>
-        </a>
-        <a href="#skills" class="w3-bar-item w3-button w3-padding-large w3-hover-black pulse">
-            <i class="fa fa-cogs w3-xxlarge"></i>
-            <p>SKILLS</p>
-        </a>
-        <a href="#projects" class="w3-bar-item w3-button w3-padding-large w3-hover-black pulse">
-            <i class="fa fa-briefcase w3-xxlarge"></i>
-            <p>PROJECTS</p>
-        </a>
-        <a href="#responsibility" class="w3-bar-item w3-button w3-padding-large w3-hover-black pulse">
-            <i class="fa fa-briefcase w3-xxlarge"></i>
-            <p>ADDITIONAL RESPONSIBILITIES</p>
-        </a>
-        <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black pulse">
-            <i class="fa fa-envelope w3-xxlarge"></i>
-            <p>CONTACT</p>
-        </a>
-    </nav>
-
-    <!-- Navbar on small screens (Hidden on medium and large screens) -->
-    <div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
-        <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small zoom-in">
-            <a href="#home" class="w3-bar-item w3-button" style="width:20% !important">HOME</a>
-            <a href="#about" class="w3-bar-item w3-button" style="width:20% !important">ABOUT</a>
-            <a href="#skills" class="w3-bar-item w3-button" style="width:20% !important">SKILLS</a>
-            <a href="#projects" class="w3-bar-item w3-button" style="width:20% !important">PROJECTS</a>
-            <a href="#responsibility" class="w3-bar-item w3-button" style="width:20% !important">ADDITIONAL RESPONSIBILITIES</a>
-            <a href="#contact" class="w3-bar-item w3-button" style="width:20% !important">CONTACT</a>
-        </div>
-    </div>
-
-    <!-- Page Content -->
-    <div class="w3-padding-large" id="main">
-        <!-- Header/Home -->
-        <header class="w3-container w3-padding-32 w3-center w3-black fade-in" id="home">
-            <h1 class="w3-jumbo"><span class="w3-hide-small">I'm</span> Shabnam Shaikh.</h1>
-            <p>Lead Software Developer</p>
-            <img src="your-image.jpg" alt="Shabnam Shaikh" class="w3-image zoom-in" width="992" height="1108">
-        </header>
-
-        <!-- About Section -->
-       <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
-            <h2 class="w3-text-light-grey">About Me</h2>
-            <hr style="width:200px" class="w3-opacity">
-            <p>I am an accomplished Software Developer with extensive expertise in Python, AI, and machine learning. My proficiency in C#, .NET Framework, and cloud platforms, combined with a strong track record of enhancing system performance and driving project success, positions me as a valuable asset to any forward-thinking organization.</p>
-
-            <p>I have spearheaded the development of comprehensive project management tools, improving project efficiency by 30% and reducing delivery timelines by 20%. My experience includes implementing advanced UI enhancements using Ajax and jQuery, which increased user satisfaction by 25%, and designing scalable architectures to support a 50% increase in user load.</p>
-
-            <p>In my previous roles, I have successfully enhanced system functionalities using technologies such as C#.NET, DevExtreme, Entity Framework 6.0, and Web API, resulting in a 35% boost in system performance and a 20% reduction in data errors through advanced validation techniques. My commitment to high-quality solutions is demonstrated by resolving critical testing issues, thereby enhancing system reliability by 30%, and managing system records with 100% data integrity and accessibility.</p>
-
-            <p>I am skilled in various programming languages and technologies, including HTML, CSS, JavaScript, Python, React.js, Bootstrap, and Git. My experience spans front-end and back-end development, with proficiency in Entity Framework 6.0, Web API, Django Rest Framework, and Microsoft SQL Server Management Studio. Additionally, I am well-versed in deployment and collaboration using Azure DevOps and have hands-on experience with cloud platforms and IIS Hosting.</p>
-
-            <p>As a proactive member of the POSH (Prevention of Sexual Harassment) committee, I am dedicated to fostering a safe and respectful workplace environment. My passion for leveraging AI-driven solutions and advancing software development drives me to contribute effectively to cutting-edge, tech-focused organizations.</p>
-        </div>
-
-        <!-- Technical Skills Section -->
-        <div class="w3-padding-64 w3-content animate-on-scroll" id="skills">
-            <h2 class="w3-text-light-grey">Technical Skills</h2>
-            <hr style="width:200px" class="w3-opacity">
-            <div class="w3-card">
-                <h3 class="w3-padding-16">Programming Languages</h3>
-                <ul>
-                    <li>C#</li>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                    <li>Python</li>
-                    <li>React.js</li>
-                </ul>
-            </div>
-            <div class="w3-card">
-                <h3 class="w3-padding-16">Front-end Development</h3>
-                <ul>
-                    <li>Bootstrap</li>
-                    <li>jQuery</li>
-                    <li>Ajax</li>
-                </ul>
-            </div>
-            <div class="w3-card">
-                <h3 class="w3-padding-16">Databases</h3>
-                <ul>
-                    <li>Microsoft SQL Server Management Studio</li>
-                </ul>
-            </div>
-            <div class="w3-card">
-                <h3 class="w3-padding-16">Version Control</h3>
-                <ul>
-                    <li>Git</li>
-                    <li>GitHub</li>
-                </ul>
-            </div>
-        </div>
-
-<!-- Projects Section -->
-<div class="w3-padding-64 w3-content animate-on-scroll" id="projects">
-    <h2 class="w3-text-light-grey">Projects</h2>
-    <hr style="width:200px" class="w3-opacity">
-
-    <div class="w3-row-padding" style="display: flex; flex-wrap: wrap; justify-content: space-between;">
-
-        <!-- Project 1: MS SQL Server Security -->
-        <div class="w3-col l4 s12" style="flex: 1 1 30%; margin-bottom: 16px;">
-            <div class="w3-card w3-round-large w3-dark-grey w3-padding w3-hover-shadow" style="height: 100%;">
-                <i class="fa fa-lock w3-xxlarge w3-text-teal"></i>
-                <h3 class="w3-text-light-grey">MS SQL Server Security</h3>
-                <p><strong>Role:</strong> Lead Developer</p>
-                <p>Designed and implemented security features for Microsoft SQL Server to enhance data protection and integrity. Developed advanced access control measures and encryption protocols, resulting in a 40% improvement in data security.</p>
-            </div>
-        </div>
-
-        <!-- Project 2: Python API Calling with Django Rest Framework -->
-        <div class="w3-col l4 s12" style="flex: 1 1 30%; margin-bottom: 16px;">
-            <div class="w3-card w3-round-large w3-dark-grey w3-padding w3-hover-shadow" style="height: 100%;">
-                <i class="fa fa-code w3-xxlarge w3-text-teal"></i>
-                <h3 class="w3-text-light-grey">Python API Calling with Django Rest Framework</h3>
-                <p><strong>Role:</strong> Lead Developer</p>
-                <p>Created robust APIs using Django Rest Framework to facilitate efficient data exchanges between applications. Optimized API performance, achieving a 35% increase in response speed and a 25% improvement in system reliability.</p>
-            </div>
-        </div>
-
-        <!-- Project 3: Python API Calling with Flask -->
-        <div class="w3-col l4 s12" style="flex: 1 1 30%; margin-bottom: 16px;">
-            <div class="w3-card w3-round-large w3-dark-grey w3-padding w3-hover-shadow" style="height: 100%;">
-                <i class="fa fa-cogs w3-xxlarge w3-text-teal"></i>
-                <h3 class="w3-text-light-grey">Python API Calling with Flask</h3>
-                <p><strong>Role:</strong> Lead Developer</p>
-                <p>Developed lightweight and scalable APIs using Flask for seamless integration with various systems. Enhanced API functionalities and security features, resulting in a 30% improvement in application performance and a 20% increase in user engagement.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="w3-row-padding" style="display: flex; flex-wrap: wrap; justify-content: space-between;">
-
-        <!-- Project 4: Micro Planning Tool (MPT) -->
-        <div class="w3-col l4 s12" style="flex: 1 1 30%; margin-bottom: 16px;">
-            <div class="w3-card w3-round-large w3-dark-grey w3-padding w3-hover-shadow" style="height: 100%;">
-                <i class="fa fa-calendar w3-xxlarge w3-text-teal"></i>
-                <h3 class="w3-text-light-grey">Micro Planning Tool (MPT)</h3>
-                <p><strong>Role:</strong> Lead Developer</p>
-                <p>Orchestrated the development of a CCPM-based project management tool. Leveraged C#, .NET Framework, and advanced analytics to create dynamic dashboards. Led a cross-functional team to integrate comprehensive project tracking features, achieving a 30% improvement in project tracking efficiency.</p>
-            </div>
-        </div>
-
-        <!-- Project 5: Execution Data Management (ExDM) -->
-        <div class="w3-col l4 s12" style="flex: 1 1 30%; margin-bottom: 16px;">
-            <div class="w3-card w3-round-large w3-dark-grey w3-padding w3-hover-shadow" style="height: 100%;">
-                <i class="fa fa-database w3-xxlarge w3-text-teal"></i>
-                <h3 class="w3-text-light-grey">Execution Data Management (ExDM)</h3>
-                <p><strong>Role:</strong> Lead Developer</p>
-                <p>Designed and implemented a robust project data management system using Python, Django Rest Framework, and Microsoft SQL Server. Increased efficiency by 30% through optimized data workflows. Enhanced user satisfaction by 25% with intuitive UI design using DevExpress.</p>
-            </div>
-        </div>
-
-        <!-- Project 6: MPT Enterprise -->
-        <div class="w3-col l4 s12" style="flex: 1 1 30%; margin-bottom: 16px;">
-            <div class="w3-card w3-round-large w3-dark-grey w3-padding w3-hover-shadow" style="height: 100%;">
-                <i class="fa fa-globe w3-xxlarge w3-text-teal"></i>
-                <h3 class="w3-text-light-grey">MPT Enterprise</h3>
-                <p><strong>Role:</strong> Lead Developer</p>
-                <p>Developed a global data management system focused on enhancing data accuracy by 35%. Utilized C#.NET and ASP.NET MVC for development. Integrated the system with Azure for cloud solutions, achieving a 30% increase in user adoption. Designed an intuitive interface with responsive design using Bootstrap and jQuery.</p>
-            </div>
-        </div>
-
-        <!-- Project 7: Proposal Data Management (PrDM) -->
-        <div class="w3-col l4 s12" style="flex: 1 1 30%; margin-bottom: 16px;">
-            <div class="w3-card w3-round-large w3-dark-grey w3-padding w3-hover-shadow" style="height: 100%;">
-                <i class="fa fa-briefcase w3-xxlarge w3-text-teal"></i>
-                <h3 class="w3-text-light-grey">Proposal Data Management (PrDM)</h3>
-                <p><strong>Role:</strong> Lead Developer</p>
-                <p>Led the development of a project tracking system ensuring data integrity and comprehensive oversight of all development cycles. Utilized JavaScript and React.js for implementation. Employed Git for version control to ensure seamless collaboration. Facilitated deployment through Azure DevOps and IIS Hosting.</p>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Additional Responsibilities Section -->
-<div class="w3-padding-64 w3-content animate-on-scroll" id="responsibility">
-    <h2 class="w3-text-light-grey">Additional Responsibilities</h2>
-    <hr style="width:200px" class="w3-opacity">
-
-    <!-- POSH Committee Member -->
-    <div class="w3-card w3-round-large w3-padding w3-margin-bottom w3-dark-grey">
-        <h3 class="w3-text-light-grey">POSH Committee Member</h3>
-        <p>Actively involved in the POSH committee, working to ensure a safe and respectful workplace environment. Led awareness campaigns and organized training sessions to promote understanding and compliance with POSH regulations. Facilitated confidential reporting channels and contributed to policy development.</p>
-    </div>
-
-    <!-- Training Coordinator -->
-    <div class="w3-card w3-round-large w3-padding w3-margin-bottom w3-dark-grey">
-        <h3 class="w3-text-light-grey">Training Coordinator</h3>
-        <p>Coordinated and conducted training sessions for new hires and existing staff on various technical and soft skills. Developed training materials and assessment tools to evaluate the effectiveness of the programs. Worked closely with department heads to tailor training to specific team needs, enhancing overall productivity by 20%.</p>
-    </div>
-
-    <!-- Volunteer Tech Support -->
-    <div class="w3-card w3-round-large w3-padding w3-margin-bottom w3-dark-grey">
-        <h3 class="w3-text-light-grey">Volunteer Tech Support</h3>
-        <p>Provided volunteer tech support for community events and local non-profit organizations. Assisted with setting up technology for events, troubleshooting technical issues, and offering training on software and hardware use. Contributed to successful event execution and improved technology access for underserved communities.</p>
-    </div>
-
-    <!-- Cross-Departmental Collaboration Lead -->
-    <div class="w3-card w3-round-large w3-padding w3-margin-bottom w3-dark-grey">
-        <h3 class="w3-text-light-grey">Cross-Departmental Collaboration Lead</h3>
-        <p>Led initiatives to improve collaboration between different departments within the organization. Implemented communication strategies and tools to streamline inter-departmental workflows. Facilitated regular meetings and feedback sessions to address issues and foster a collaborative environment, resulting in a 15% increase in project efficiency.</p>
-    </div>
-</div>
-
-<!-- Contact Section -->
-<div class="w3-padding-64 w3-content w3-text-grey" id="contact">
-    <h2 class="w3-text-light-grey">Contact</h2>
-    <hr style="width:200px" class="w3-opacity">
-    
-    <!-- Contact Information -->
-    <div class="w3-row-padding w3-center">
-        <div class="w3-col l4 m6 s12 w3-padding-16">
-            <div class="w3-card w3-round-large w3-light-grey w3-padding w3-hover-shadow">
-                <i class="fa fa-envelope w3-xxlarge w3-text-teal"></i>
-                <h3>Email</h3>
-                <p>
-                    <a href="mailto:shabnam041998@gmail.com" class="w3-text-teal">Get in Touch</a>
-                </p>
-            </div>
-        </div>
-        
-        <div class="w3-col l4 m6 s12 w3-padding-16">
-            <div class="w3-card w3-round-large w3-light-grey w3-padding w3-hover-shadow">
-                <i class="fa fa-linkedin w3-xxlarge w3-text-blue"></i>
-                <h3>LinkedIn</h3>
-                <p>
-                    <a href="http://www.linkedin.com/in/shabnamShaikh1998" target="_blank" class="w3-text-blue">Connect with me</a>
-                </p>
-            </div>
-        </div>
-    </div>
-    
-    <!-- Contact Form -->
-    <div class="w3-padding-32 w3-center">
-        <p>If you have any questions or would like to discuss potential opportunities, please feel free to reach out.</p>
-        <form action="mailto:shabnam041998@gmail.com" method="post" enctype="text/plain">
-            <div class="w3-row-padding w3-margin-top">
-                <div class="w3-col l6 m12 s12">
-                    <input class="w3-input w3-border w3-round-large" type="text" name="name" placeholder="Your Name" required>
-                </div>
-                <div class="w3-col l6 m12 s12">
-                    <input class="w3-input w3-border w3-round-large" type="email" name="email" placeholder="Your Email" required>
-                </div>
-            </div>
-            <textarea class="w3-input w3-border w3-round-large w3-margin-top" name="message" rows="5" placeholder="Your Message" required></textarea>
-            <button class="w3-button w3-teal w3-round-large w3-margin-top" type="submit">Send Message</button>
-        </form>
-    </div>
-</div>
-
-
-    </div>
-    
 </body>
+
 </html>

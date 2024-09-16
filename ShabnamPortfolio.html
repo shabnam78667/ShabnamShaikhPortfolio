@@ -11,291 +11,325 @@
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Custom CSS -->
-      <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-body {
-    font-family: 'Poppins', sans-serif;
-    color: #333;
-    line-height: 1.6;
-    scroll-behavior: smooth;
-    background: #f4f4f4; /* Light professional background */
-}
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+            background: #f4f4f4; /* Light professional background */
+        }
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
 
-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #282c34; /* Dark background for nav */
-    z-index: 1000;
-    padding: 10px 0;
-    display: flex;
-    justify-content: center;
-}
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #282c34; /* Dark background for nav */
+            z-index: 1000;
+            padding: 10px 0;
+            display: flex;
+            justify-content: center;
+        }
 
-.nav-container {
-    width: 100%;
-    max-width: 1200px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px; /* Add padding for mobile */
-}
+        .nav-container {
+            width: 100%;
+            max-width: 1200px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px; /* Add padding for mobile */
+        }
 
-.nav-container .logo {
-    color: #f5f5f5;
-    font-size: 1.5rem;
-    font-weight: 700;
-}
+        .nav-container .logo {
+            color: #f5f5f5;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    padding: 0;
-}
+        nav ul {
+            list-style: none;
+            display: flex;
+            padding: 0;
+        }
 
-nav ul li {
-    margin: 0 15px;
-}
+        nav ul li {
+            margin: 0 15px;
+        }
 
-nav ul li a {
-    color: #f5f5f5;
-    font-size: 16px;
-    font-weight: 500;
-    padding: 8px 16px;
-    border-radius: 8px;
-    transition: background-color 0.3s;
-}
+        nav ul li a {
+            color: #f5f5f5;
+            font-size: 16px;
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+        }
 
-nav ul li a:hover {
-    background-color: #444;
-}
+        nav ul li a:hover {
+            background-color: #444;
+        }
 
-.menu-toggle {
-    display: none;
-    font-size: 1.5rem;
-    color: #f5f5f5;
-    cursor: pointer;
-}
+        .menu-toggle {
+            display: none;
+            font-size: 1.5rem;
+            color: #f5f5f5;
+            cursor: pointer;
+        }
 
-section {
-    padding: 80px 0;
-    min-height: 100vh;
-    background-color: #ffffff; /* White background for sections */
-}
+        section {
+            padding: 80px 0;
+            min-height: 100vh;
+            background-color: #ffffff; /* White background for sections */
+        }
 
-header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    height: 100vh;
-    text-align: center;
-    padding: 0 20px; /* Add padding for mobile */
-}
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: 100vh;
+            text-align: center;
+            padding: 0 20px; /* Add padding for mobile */
+        }
 
-.profile-image {
-    width: 180px; /* Increased profile image size */
-    height: 180px; /* Increased profile image size */
-    border-radius: 50%;
-    border: 6px solid #333; /* Professional border color */
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Enhanced shadow for a professional look */
-    overflow: hidden;
-    margin-bottom: 20px;
-    transition: transform 0.3s ease;
-}
+        .profile-image {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 6px solid #333;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
 
-.profile-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
+        .profile-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
 
-.profile-image:hover {
-    transform: scale(1.05); /* Slightly enlarge image on hover */
-}
+        .profile-image:hover {
+            transform: scale(1.05);
+        }
 
-header h1 {
-    font-size: 3rem;
-    font-weight: 700;
-    margin-bottom: 10px;
-}
+        header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
 
-header p {
-    font-size: 1.5rem;
-    color: #666; /* Darker color for text */
-    margin-bottom: 20px;
-}
+        header p {
+            font-size: 1.5rem;
+            color: #666;
+            margin-bottom: 20px;
+        }
 
-.content {
-    max-width: 1200px;
-    margin: auto;
-    padding: 0 20px;
-}
+        .content {
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 20px;
+        }
 
-h2 {
-    font-size: 2.5rem;
-    color: #333;
-    text-align: center;
-    margin-bottom: 1.5rem;
-}
+        h2 {
+            font-size: 2.5rem;
+            color: #333;
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
 
-hr {
-    width: 200px;
-    margin: 1rem auto;
-    border: 1px solid #444;
-}
+        hr {
+            width: 200px;
+            margin: 1rem auto;
+            border: 1px solid #444;
+        }
 
-.about p {
-    text-align: justify;
-    font-size: 1.1rem;
-    color: #555; /* Slightly lighter color for text */
-    margin-bottom: 20px;
-}
+        .about p {
+            text-align: justify;
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 20px;
+        }
 
-.skills,
-.projects,
-.responsibilities {
+        .skills,
+        .projects,
+        .responsibilities {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .card i {
+            font-size: 2rem;
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .card p {
+            color: #666;
+        }
+
+        /* Updated Contact Section */
+        /* Contact Section Styling */
+.contact-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Use auto-fit for responsiveness */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-.card {
-    background-color: #f9f9f9; /* Light card background */
+.contact-cards .card {
+    background-color: #f9f9f9;
     padding: 20px;
     border-radius: 10px;
+    text-align: center;
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: center;
 }
 
-.card:hover {
+.contact-cards .card:hover {
     transform: scale(1.05);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
-.card i {
-    font-size: 2rem;
-    color: #007bff; /* Professional color */
-    margin-bottom: 10px;
+.contact-cards .card i {
+    font-size: 2.5rem;
+    color: #007bff;
+    margin-bottom: 15px;
 }
 
-.card h3 {
+.contact-cards .card h3 {
+    font-size: 1.5rem;
     margin-bottom: 10px;
     color: #333;
 }
 
-.card p {
+.contact-cards .card p {
+    font-size: 1.1rem;
     color: #666;
 }
 
-.contact form {
-    display: grid;
-    gap: 15px;
-    max-width: 600px;
-    margin: 0 auto;
+.contact-cards .card p a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
-.contact input,
-.contact textarea {
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 1rem;
-    color: #333;
-}
-
-.contact button {
-    padding: 12px 20px;
-    background-color: #007bff; /* Professional color */
-    border: none;
-    color: #fff;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.contact button:hover {
-    background-color: #0056b3;
-}
-
-footer {
-    background-color: #282c34; /* Dark background for footer */
-    padding: 20px 0;
-    text-align: center;
-    color: #f5f5f5;
-}
-
-footer p {
-    font-size: 0.9rem;
+.contact-cards .card p a:hover {
+    color: #0056b3;
 }
 
 @media screen and (max-width: 768px) {
-    nav ul {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background-color: #282c34;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        padding: 10px 0;
-    }
-
-    nav ul.active {
-        display: flex;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-
-    header h1 {
-        font-size: 2.5rem;
-    }
-
-    header p {
-        font-size: 1.2rem;
-    }
-
-    .card {
-        padding: 15px;
+    .contact-cards {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
 }
 
 @media screen and (max-width: 480px) {
-    header h1 {
-        font-size: 2rem;
-    }
-
-    header p {
-        font-size: 1rem;
-    }
-
-    .profile-image {
-        width: 140px; /* Reduce profile image size for small screens */
-        height: 140px;
-    }
-
-    .skills,
-    .projects,
-    .responsibilities {
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Adjust grid for smaller screens */
+    .contact-cards {
+        grid-template-columns: 1fr;
     }
 }
 
+
+        footer {
+            background-color: #282c34;
+            padding: 20px 0;
+            text-align: center;
+            color: #f5f5f5;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+        }
+
+        @media screen and (max-width: 768px) {
+            nav ul {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background-color: #282c34;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                padding: 10px 0;
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            header p {
+                font-size: 1.2rem;
+            }
+
+            .card {
+                padding: 15px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            header p {
+                font-size: 1rem;
+            }
+
+            .profile-image {
+                width: 140px;
+                height: 140px;
+            }
+
+            .skills,
+            .projects,
+            .responsibilities {
+                grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            }
+        }
     </style>
 
 </head>
@@ -345,7 +379,6 @@ footer p {
             <h2><i class="fas fa-cogs"></i> Skills</h2>
             <hr>
             <div class="skills">
-                <!-- Add your skills here -->
                 <div class="card">
                     <i class="fas fa-code"></i>
                     <h3>Programming</h3>
@@ -376,7 +409,6 @@ footer p {
             <h2><i class="fas fa-project-diagram"></i> Projects</h2>
             <hr>
             <div class="projects">
-                <!-- Add your projects here -->
                 <div class="card">
                     <i class="fas fa-lock"></i>
                     <h3>MS SQL Server Security</h3>
@@ -412,7 +444,6 @@ footer p {
             <h2><i class="fas fa-tasks"></i> Responsibilities</h2>
             <hr>
             <div class="responsibilities">
-                <!-- Add your responsibilities here -->
                 <div class="card">
                     <h3>System Development</h3>
                     <p>Led the development of comprehensive project management tools and systems.</p>
@@ -434,20 +465,35 @@ footer p {
     </section>
 
     <!-- Contact Section -->
-    <section id="contact">
-        <div class="content">
-            <h2><i class="fas fa-envelope"></i> Contact</h2>
-            <hr>
-            <div class="contact">
-                <form action="submit_form.php" method="post">
-                    <input type="text" name="name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
-                    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-                    <button type="submit">Send Message</button>
-                </form>
+<section id="contact">
+    <div class="content">
+        <h2><i class="fas fa-envelope"></i> Contact</h2>
+        <hr>
+        <div class="contact-cards">
+            <div class="card">
+                <i class="fas fa-envelope"></i>
+                <h3>Email</h3>
+                <p><a href="mailto:shabnam041998@gmail.com">shabnam041998@gmail.com</a></p>
+            </div>
+            <div class="card">
+                <i class="fas fa-phone"></i>
+                <h3>Phone</h3>
+                <p><a href="tel:+1234567890">+918767089752</a></p>
+            </div>
+            <div class="card">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>Location</h3>
+                <p>Karvenagar,Pune,India</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-linkedin"></i>
+                <h3>LinkedIn</h3>
+                <p><a href="https://www.linkedin.com/in/shabnamshaikh1998" target="_blank">Shabnam Shaikh</a></p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
 
     <!-- Footer -->
     <footer>
@@ -455,36 +501,35 @@ footer p {
     </footer>
 
     <!-- JavaScript for Responsive Menu -->
-<!-- JavaScript for Responsive Menu -->
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const menuToggle = document.querySelector('.menu-toggle');
-        const navList = document.querySelector('nav ul');
-        const menuLinks = document.querySelectorAll('nav ul li a');
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navList = document.querySelector('nav ul');
+            const menuLinks = document.querySelectorAll('nav ul li a');
 
-        // Toggle menu open/close when clicking on the toggle button
-        menuToggle.addEventListener('click', function (event) {
-            navList.classList.toggle('active');
-            event.stopPropagation(); // Stop event from bubbling up to the document
-        });
+            // Toggle menu open/close when clicking on the toggle button
+            menuToggle.addEventListener('click', function(event) {
+                navList.classList.toggle('active');
+                event.stopPropagation(); // Stop event from bubbling up to the document
+            });
 
-        // Close menu when clicking anywhere outside the menu or the toggle button
-        document.addEventListener('click', function (event) {
-            if (navList.classList.contains('active') && !navList.contains(event.target) && !menuToggle.contains(event.target)) {
-                navList.classList.remove('active');
-            }
-        });
-
-        // Close menu when clicking on a menu link
-        menuLinks.forEach(link => {
-            link.addEventListener('click', function () {
-                if (navList.classList.contains('active')) {
+            // Close menu when clicking anywhere outside the menu or the toggle button
+            document.addEventListener('click', function(event) {
+                if (navList.classList.contains('active') && !navList.contains(event.target) && !menuToggle.contains(event.target)) {
                     navList.classList.remove('active');
                 }
             });
+
+            // Close menu when clicking on a menu link
+            menuLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    if (navList.classList.contains('active')) {
+                        navList.classList.remove('active');
+                    }
+                });
+            });
         });
-    });
-</script>
+    </script>
 
 </body>
 
